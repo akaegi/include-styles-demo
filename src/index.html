@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" theme="dark">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>IncludeStylesDemo</title>
@@ -12,10 +12,16 @@
   see https://vaadin.com/tutorials/using-web-components-in-angular -->
   <script type="js" src="webcomponents/webcomponents-loader.js"></script>
 
-  <!-- https://vaadin.com/tutorials/using-web-components-in-angular -->
-  <custom-style>
-    <style include="lumo-color lumo-typography"></style>
-  </custom-style>
+  <dom-module id="app-colors">
+    <template>
+      <style>
+        a {
+          color: green;
+          /* color: var(--lumo-primary-text-color); */
+        }
+      </style>
+    </template>
+  </dom-module>
 
 </head>
 <body>
